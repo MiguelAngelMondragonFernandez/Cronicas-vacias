@@ -1,0 +1,102 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Unity\\proyectos\\intento tres\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{ECFC9790-E493-B713-DD28-8639D4652622}|Assembly-CSharp.csproj|d:\\unity\\proyectos\\intento tres\\assets\\scripts\\menumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECFC9790-E493-B713-DD28-8639D4652622}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\menumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECFC9790-E493-B713-DD28-8639D4652622}|Assembly-CSharp.csproj|d:\\unity\\proyectos\\intento tres\\assets\\scripts\\pausemenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECFC9790-E493-B713-DD28-8639D4652622}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\pausemenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECFC9790-E493-B713-DD28-8639D4652622}|Assembly-CSharp.csproj|D:\\Unity\\proyectos\\intento tres\\assets\\scripts\\characterone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECFC9790-E493-B713-DD28-8639D4652622}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\characterone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECFC9790-E493-B713-DD28-8639D4652622}|Assembly-CSharp.csproj|D:\\Unity\\proyectos\\intento tres\\assets\\scripts\\textslogiic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECFC9790-E493-B713-DD28-8639D4652622}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\textslogiic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECFC9790-E493-B713-DD28-8639D4652622}|Assembly-CSharp.csproj|D:\\Unity\\proyectos\\intento tres\\assets\\scripts\\characters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECFC9790-E493-B713-DD28-8639D4652622}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\characters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MenuManager.cs",
+              "DocumentMoniker": "D:\\Unity\\proyectos\\intento tres\\Assets\\scripts\\MenuManager.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\MenuManager.cs",
+              "ToolTip": "D:\\Unity\\proyectos\\intento tres\\Assets\\scripts\\MenuManager.cs",
+              "RelativeToolTip": "Assets\\scripts\\MenuManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T07:13:52.386Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PauseMenu.cs",
+              "DocumentMoniker": "D:\\Unity\\proyectos\\intento tres\\Assets\\scripts\\PauseMenu.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\PauseMenu.cs",
+              "ToolTip": "D:\\Unity\\proyectos\\intento tres\\Assets\\scripts\\PauseMenu.cs",
+              "RelativeToolTip": "Assets\\scripts\\PauseMenu.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEkAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T17:56:18.158Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Characters.cs",
+              "DocumentMoniker": "D:\\Unity\\proyectos\\intento tres\\Assets\\scripts\\Characters.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\Characters.cs",
+              "ToolTip": "D:\\Unity\\proyectos\\intento tres\\Assets\\scripts\\Characters.cs",
+              "RelativeToolTip": "Assets\\scripts\\Characters.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T17:19:52.37Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CharacterOne.cs",
+              "DocumentMoniker": "D:\\Unity\\proyectos\\intento tres\\Assets\\scripts\\CharacterOne.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\CharacterOne.cs",
+              "ToolTip": "D:\\Unity\\proyectos\\intento tres\\Assets\\scripts\\CharacterOne.cs",
+              "RelativeToolTip": "Assets\\scripts\\CharacterOne.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAgwHcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T04:04:45.353Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TextsLogiic.cs",
+              "DocumentMoniker": "D:\\Unity\\proyectos\\intento tres\\Assets\\scripts\\TextsLogiic.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\TextsLogiic.cs",
+              "ToolTip": "D:\\Unity\\proyectos\\intento tres\\Assets\\scripts\\TextsLogiic.cs",
+              "RelativeToolTip": "Assets\\scripts\\TextsLogiic.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAgwGAAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-25T04:18:34.907Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
