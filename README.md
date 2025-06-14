@@ -86,26 +86,6 @@ Una experiencia narrativa enfocada en la construcción de personajes, ambientaci
 
 ---
 
-## 🚀 Estado del Desarrollo
-
-| Fase                     | Estado     | Notas                                  |
-|--------------------------|------------|----------------------------------------|
-| Diseño Narrativo         | ✅ Completo| Primer episodio extraído y adaptado.   |
-| Diseño de Personajes     | 🟡 En progreso | Bocetos y pruebas de expresión.      |
-| Motor y herramientas     | 🟢 En marcha | UI Toolkit y scripting inicial.        |
-| Arte de fondos           | 🔴 Pendiente | Necesita diseñador/a especializado.    |
-| MVP jugable (Demo)       | 🔜 Planeado | Para entregar en fase pre-alpha.       |
-
----
-
-## 🧩 Ramas Narrativas Planeadas
-
-- **Rama Cristalina**: Unión profunda con Relina y confrontación con la resonancia.  
-- **Rama Tengu**: Alianza con el orden, represión de anomalías, pero ¿a qué precio?  
-- **Rama Independiente**: Huida del conflicto, búsqueda de verdad individual y memoria.  
-
----
-
 ## 🎯 Público Objetivo
 
 - Fans de novelas visuales como *Steins;Gate*, *428: Shibuya Scramble* o *The House in Fata Morgana*.
@@ -114,27 +94,6 @@ Una experiencia narrativa enfocada en la construcción de personajes, ambientaci
 
 ---
 
-## 🤝 Créditos y Contacto
-
-**Narrativa Original y Guion:** Angel  
-**Dirección Creativa:** Angel  
-**Diseño y desarrollo (Unity):** [Por asignar]  
-**Arte de personajes y escenarios:** [Por asignar]  
-**Música y Sonido:** [Por asignar]
-
-> Si deseas participar, colaborar en el arte, música o UI, contáctame directamente.
-
----
-
-## 📅 Roadmap (Tentativo)
-
-- **Julio 2025**: Diseño de prototipo jugable del Prólogo  
-- **Agosto 2025**: Arte de personajes y fondos base  
-- **Septiembre 2025**: Implementación de sistema de decisiones y resonancia  
-- **Octubre 2025**: Demo vertical (episodio 1 completo)  
-- **Noviembre 2025**: Pruebas internas y retroalimentación narrativa  
-
----
 
 ## 🧠 Notas Finales
 
