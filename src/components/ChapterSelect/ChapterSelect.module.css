@@ -1,0 +1,62 @@
+.chapterContainer {
+  width: 1280px;
+  height: 720px;
+  margin: 2rem auto;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Helvetica Neue', sans-serif;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 800px;
+  text-align: center;
+}
+
+.title {
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #5a8bd8;
+  padding-bottom: 15px;
+}
+
+.chapterList {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.chapterList button {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 20px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.chapterList button:hover {
+  background-color: #5a8bd8;
+  border-color: #5a8bd8;
+}
+
+.backButton {
+  margin-top: 40px;
+  background: #c0392b;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}

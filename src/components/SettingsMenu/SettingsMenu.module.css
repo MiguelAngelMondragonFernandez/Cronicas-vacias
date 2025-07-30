@@ -1,0 +1,56 @@
+:root {
+  --ui-color-primary: #5a8bd8;
+}
+
+.settingsContainer {
+  width: 1280px;
+  height: 720px;
+  margin: 2rem auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Helvetica Neue', sans-serif;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.title {
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  border-bottom: 2px solid var(--ui-color-primary);
+  padding-bottom: 15px;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 80%;
+  max-width: 600px;
+  color: white;
+}
+
+.options label {
+  font-size: 1.2rem;
+}
+
+.options input[type="range"] {
+  width: 100%;
+}
+
+.backButton {
+  margin-top: 40px;
+  background: #c0392b;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}

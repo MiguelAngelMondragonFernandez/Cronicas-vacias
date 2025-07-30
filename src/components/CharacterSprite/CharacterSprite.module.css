@@ -1,0 +1,23 @@
+.sprite {
+  position: absolute;
+  bottom: 0;
+  height: 95%; /* Ajusta esto según el arte de tu personaje */
+  z-index: 2; /* Por encima del fondo */
+  transition: opacity 0.5s ease-in-out; /* Para fades suaves */
+  -webkit-filter: drop-shadow(5px 5px 5px #222); /* Sombra para resaltar */
+  filter: drop-shadow(5px 5px 5px #222);
+}
+
+.left {
+  left: -10%; /* Posicionamiento típico */
+}
+
+.right {
+  right: -10%; /* Posicionamiento típico */
+  transform: scaleX(-1); /* Para voltear el sprite si es necesario */
+}
+
+.center {
+  left: 50%;
+  transform: translateX(-50%);
+}

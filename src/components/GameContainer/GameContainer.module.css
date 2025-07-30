@@ -1,0 +1,10 @@
+.gameContainer {
+  position: relative; /* Clave para que los hijos con position: absolute se posicionen respecto a este contenedor */
+  width: 1280px; /* Ancho típico de VN HD */
+  height: 720px; /* Alto típico de VN HD */
+  margin: 2rem auto; /* Para centrarlo en la página */
+  background-color: #000;
+  overflow: hidden; /* Evita que algo se salga del marco */
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}

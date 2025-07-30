@@ -1,0 +1,57 @@
+.dialogueBox {
+  position: absolute;
+  bottom: 2%;
+  left: 5%;
+  right: 5%;
+  height: 28%;
+  background-color: rgba(10, 20, 40, 0.85); /* Tono azul oscuro semi-transparente */
+  border: 2px solid var(--ui-color-primary);
+  border-radius: 10px;
+  padding: 20px 30px;
+  color: white;
+  z-index: 3; /* Por encima de todo */
+  box-sizing: border-box;
+  font-family: 'Helvetica Neue', sans-serif; /* Usa una fuente limpia */
+}
+
+.characterName {
+  position: absolute;
+  top: -50px; /* Lo posiciona justo encima del cuadro de diálogo */
+  left: 30px;
+  background-color: var(--ui-color-primary);
+  padding: 8px 25px;
+  border-radius: 8px 8px 0 0;
+  font-weight: bold;
+  font-size: 1.4rem;
+  text-shadow: 1px 1px 2px #000;
+}
+
+.dialogueText {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  margin: 0;
+  padding-top: 10px; /* Espacio para que no se pegue al nombre */
+}
+
+/* Indicador de "clic para continuar", muy típico en VNs */
+.dialogueBox::after {
+    content: '▼';
+    position: absolute;
+    bottom: 10px;
+    right: 25px;
+    font-size: 1.5rem;
+    color: #fff;
+    animation: bounce 1s infinite;
+}
+
+ @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
