@@ -1,8 +1,8 @@
 # 📘 Crónicas Vacías: Resonancia Cristalizada — Novela Visual
 
-**Motor:** Unity 6 (UI Toolkit / Visual Scripting / Timeline)  
+**Motor:** React.js (UI personalizada / Manejo de estados / Rutas narrativas) + Electron (empaquetado y ejecutable)  
 **Género:** Novela Visual / Ciencia Ficción / Thriller Psicológico  
-**Plataformas Objetivo:** PC (Windows/Mac), WebGL, Android  
+**Plataformas Objetivo:** PC (Windows/Mac), Web (versión adaptada), Android (posible port futuro)  
 **Idioma Principal:** Español (con posibilidad de localización al inglés y japonés)  
 **Estado Actual:** Etapa de diseño narrativo / Planificación de flujo interactivo
 
@@ -20,7 +20,7 @@ Perseguida por entidades militares, enfrentando criaturas de cristal, y acompañ
 
 ### 🎭 Novela Visual Interactiva
 
-Una experiencia narrativa enfocada en la construcción de personajes, ambientación emocional, y decisiones que afectan directamente el curso de la historia. A través de ilustraciones dibujadas a mano, diálogos con opciones, y escenas cinemáticas, el jugador vivirá en primera persona los eventos que marcarán el destino de una órbita entera.
+Una experiencia narrativa enfocada en la construcción de personajes, ambientación emocional y decisiones que afectan directamente el curso de la historia. A través de ilustraciones dibujadas a mano, diálogos con opciones y transiciones cinematográficas, el jugador vivirá en primera persona los eventos que marcarán el destino de una órbita entera.
 
 ---
 
@@ -32,12 +32,12 @@ Una experiencia narrativa enfocada en la construcción de personajes, ambientaci
 - Temáticas adultas: aislamiento, identidad, control, resonancia espiritual.
 
 ### 🌁 **Arte Visual y Ambientación Futurista**
-- Estética *tech-noir* con inspiración en el Japón posmoderno y ciencia ficción asiática.
+- Estética *tech-noir* inspirada en Japón posmoderno y ciencia ficción asiática.
 - Escenarios detallados de la ciudad de Fuji, templos y estructuras orbitales.
 - Ilustraciones de personajes en estilo anime con expresiones dinámicas.
 
 ### 🔊 **Sonido y Música Ambiental**
-- Pistas musicales adaptativas que cambian según el tono emocional de la escena.
+- Pistas musicales adaptativas según el tono emocional de la escena.
 - Efectos de sonido atmosféricos: zumbidos de drones, reverberación del domo, cristal rompiéndose.
 - Opcional: actuación de voz para los personajes principales.
 
@@ -58,48 +58,42 @@ Una experiencia narrativa enfocada en la construcción de personajes, ambientaci
 
 ---
 
-## 🛠 Tecnologías y Funcionalidades en Unity 6
+## 🛠 Tecnologías y Funcionalidades
 
-- **UI Toolkit**: Interfaces limpias y adaptables (terminal holográfico, decisiones ramificadas).
-- **Visual Scripting**: Implementación sin código de lógicas narrativas (acciones, triggers, eventos).
-- **Timeline & Cinemachine**: Animación de escenas clave (caída del cristal, aparición de Relina).
-- **Scriptable Objects**: Para manejar rutas narrativas, decisiones persistentes y control de estados emocionales.
+- **React.js**  
+  - Manejo de interfaz y rutas narrativas con componentes reutilizables.  
+  - Uso de `React Router` para estructurar escenas y episodios.  
+  - Integración de animaciones con `Framer Motion` para transiciones suaves.  
+
+- **Electron**  
+  - Empaquetado del proyecto para generar ejecutables en Windows y Mac.  
+  - Integración con sistema de archivos para funciones de guardado local y carga de partidas.  
+
+- **Control Narrativo**  
+  - Estado global con `Redux` o `Zustand` para persistir elecciones y variables de historia.  
+  - Gestión modular de capítulos mediante JSON y/o Markdown.  
 
 ---
 
 ## 🔁 Flujo del Juego
 
-1. **Prólogo**: Introducción a Naoko y la ciudad de Fuji.
-2. **Incidente del Templo**: Evento que marca el punto de no retorno (aparición del cristal y Relina).
-3. **Fuga y Resonancia**: Escenas con toma de decisiones que definirán la conexión con Relina.
-4. **Desenlace en Órbita Tres**: Revelación de secretos, confrontación y bifurcación de finales.
-
----
-
-## 📂 Archivos del Proyecto
-
-- `Assets/Scripts/DecisionSystem.cs` → Controlador de elecciones y rutas narrativas.  
-- `Assets/UI/TerminalOverlay.uxml` → Interfaz del terminal personal de Naoko.  
-- `Assets/Audio/OST/` → Música atmosférica por capítulos.  
-- `Assets/Scenes/Episodios/` → Cada episodio es una escena modular.  
-- `Docs/Guion_Narrativo.pdf` → Guión base extraído directamente de la novela original.
+1. **Prólogo**: Introducción a Naoko y la ciudad de Fuji.  
+2. **Incidente del Templo**: Aparición del cristal y llegada de Relina.  
+3. **Fuga y Resonancia**: Decisiones clave que definen el vínculo con Relina.  
+4. **Desenlace en Órbita Tres**: Revelación final, confrontaciones y múltiples finales.
 
 ---
 
 ## 🎯 Público Objetivo
 
-- Fans de novelas visuales como *Steins;Gate*, *428: Shibuya Scramble* o *The House in Fata Morgana*.
-- Amantes del anime con estética tecnológica y existencial (*Ergo Proxy*, *Psycho-Pass*, *Ghost in the Shell*).
-- Jugadores que buscan experiencias narrativas profundas y relecturas múltiples.
+- Fans de novelas visuales como *Steins;Gate*, *428: Shibuya Scramble* o *The House in Fata Morgana*.  
+- Amantes del anime con estética tecnológica y existencial (*Ergo Proxy*, *Psycho-Pass*, *Ghost in the Shell*).  
+- Jugadores que buscan experiencias narrativas profundas y rejugables.
 
 ---
-
 
 ## 🧠 Notas Finales
 
 "Crónicas Vacías: Resonancia Cristalizada" no solo es una historia visual, sino una experiencia emocional. Una meditación sobre la identidad, el destino y la fragilidad del mundo construido sobre realidades fabricadas.
 
 Todo comienza con una chispa... un cristal que cae en el lugar equivocado, en el momento justo.
-
----
-
