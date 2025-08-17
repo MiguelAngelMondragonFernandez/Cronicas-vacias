@@ -34,8 +34,12 @@ const SettingsMenu = ({ onBack }) => {
         <label>Velocidad del Texto</label>
         <input 
           type="range" min="10" max="100" step="10"
-          value={settings.textSpeed} 
-          onChange={(e) => updateSetting('textSpeed', parseInt(e.target.value))} />
+          value={110 - settings.textSpeed} 
+          onChange={(e) => {
+            const value = parseInt(e.target.value);
+            const invertedValue = 110 - value;
+            updateSetting('textSpeed', invertedValue);
+          }} />
 
         <label>Volumen de Música (BGM)</label>
         <input 

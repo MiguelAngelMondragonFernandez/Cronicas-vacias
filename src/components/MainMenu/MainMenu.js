@@ -1,13 +1,15 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { SettingsContext } from '../../context/SettingsContext';
 import { useSave } from '../../context/SaveContext';
 import * as audio from '../../services/audioService';
 import styles from './MainMenu.module.css';
 import bgMenu from '../../assets/backgrounds/school_gate.jpg';
+import ConfirmDialog from '../ConfirmDialog/ConfirmDialog';
 
 const MainMenu = ({ onStartGame, onChapterSelect, onOptions, onLoadGame }) => {
   const { settings } = useContext(SettingsContext);
   const { saves } = useSave();
+  const [showConfirmDialog, setShowConfirmDialog] = useState(false);
 
   const handleStart = () => {
     audio.playBgm('bgm_main_theme', settings.bgmVolume);
@@ -26,9 +28,7 @@ const MainMenu = ({ onStartGame, onChapterSelect, onOptions, onLoadGame }) => {
 
   const handleExitClick = () => {
     audio.playSfx('sfx_click', settings.sfxVolume);
-    if (window.confirm('¿Estás seguro de que quieres salir?')) {
-      window.close();
-    }
+    setShowConfirmDialog(true);
   };
 
   const hasSaves = saves && saves.length > 0 && saves.some(save => save !== null);
@@ -45,6 +45,13 @@ const MainMenu = ({ onStartGame, onChapterSelect, onOptions, onLoadGame }) => {
           <button onClick={handleExitClick}>Salir</button>
         </nav>
       </div>
+      {showConfirmDialog && (
+        <ConfirmDialog
+          message="¿Estás seguro de que quieres salir?"
+          onConfirm={() => window.close()}
+          onCancel={() => setShowConfirmDialog(false)}
+        />
+      )}
     </div>
   );
 };

@@ -1,12 +1,10 @@
-:root {
-  --ui-color-primary: #5a8bd8;
-}
+
 
 .settingsContainer {
   width: 1280px;
   height: 720px;
   margin: 2rem auto;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(10, 20, 40, 0.85);
   position: relative;
   display: flex;
   flex-direction: column;
@@ -17,6 +15,19 @@
   overflow: hidden;
   padding: 40px;
   box-sizing: border-box;
+  border: 2px solid var(--ui-color-primary);
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .title {
@@ -46,7 +57,7 @@
 
 .backButton {
   margin-top: 40px;
-  background: #c0392b;
+  background: var(--ui-color-primary);
   border: none;
   color: white;
   padding: 10px 25px;

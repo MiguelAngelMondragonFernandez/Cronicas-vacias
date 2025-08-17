@@ -1,0 +1,79 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+}
+
+.dialog {
+  background-color: rgba(10, 20, 40, 0.95);
+  border: 2px solid var(--ui-color-primary);
+  border-radius: 10px;
+  padding: 30px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.dialog.closing {
+  animation: fadeOut 0.3s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+}
+
+.message {
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.confirmButton, .cancelButton {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: white;
+  min-width: 120px;
+}
+
+.confirmButton {
+  background-color: var(--ui-color-primary);
+}
+
+.cancelButton {
+  background-color: #555;
+}
