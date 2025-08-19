@@ -36,7 +36,7 @@ const MainMenu = ({ onStartGame, onChapterSelect, onOptions, onLoadGame }) => {
   return (
     <div className={styles.menuContainer} style={{ backgroundImage: `url(${bgMenu})` }}>
       <div className={styles.overlay}>
-        <h1 className={styles.title}>Mi Novela Visual</h1>
+        <h1 className={styles.title}>Cronicas Vacias:<br></br>Resonancia Cristalina</h1>
         <nav className={styles.navMenu}>
           <button onClick={handleStart}>Comenzar</button>
           <button onClick={handleChapterSelectClick}>Selección de Capítulo</button>
