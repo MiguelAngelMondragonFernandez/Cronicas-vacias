@@ -12,23 +12,29 @@ import ChoiceBox from '../ChoiceBox/ChoiceBox';
 
 import styles from './GameScreen.module.css';
 
-function GameScreen({ chapterId, onReturnToMenu, onOpenSettings, onOpenSaveMenu, onOpenLoadMenu, initialSceneId = 'start', initialChoices = [] }) {
+import ConfirmDialog from '../ConfirmDialog/ConfirmDialog';
+
+function GameScreen({ chapterId, onReturnToMenu, onOpenSettings, onOpenSaveMenu, onOpenLoadMenu, initialSceneId = 'start', initialChoices = [], isMenuOpen }) {
   const { settings } = useContext(SettingsContext);
   const { quickSave, quickLoad, hasQuickSave } = useSave();
-  const chapterScript = storyData[chapterId].script;
-
   const [currentSceneId, setCurrentSceneId] = useState(initialSceneId);
   const [playerChoices, setPlayerChoices] = useState(initialChoices);
   const [gameVariables, setGameVariables] = useState({});
+  const [showConfirmDialog, setShowConfirmDialog] = useState(false);
 
-  const currentScene = chapterScript[currentSceneId];
+  const chapterScript = chapterId ? storyData[chapterId].script : {};
+  const currentScene = chapterId ? chapterScript[currentSceneId] : {};
 
   useEffect(() => {
-      if (currentScene?.bgm) {
+      if (chapterId && currentScene?.bgm) {
           audio.playBgm(currentScene.bgm, settings.bgmVolume);
       }
   }, [currentSceneId, settings.bgmVolume, chapterId]);
 
+  if (!chapterId) {
+    return null;
+  }
+  
   const handleNext = (nextSceneId) => {
     if (nextSceneId) {
       setCurrentSceneId(nextSceneId);
@@ -39,6 +45,7 @@ function GameScreen({ chapterId, onReturnToMenu, onOpenSettings, onOpenSaveMenu,
   };
 
   const handleDialogueClick = () => {
+    if (isMenuOpen) return;
     if (currentScene.type !== 'choice') {
       audio.playSfx('sfx_click', settings.sfxVolume);
       if (currentScene.end) {
@@ -127,6 +134,7 @@ function GameScreen({ chapterId, onReturnToMenu, onOpenSettings, onOpenSaveMenu,
             key={currentSceneId}
             character={currentScene.character}
             text={currentScene.text}
+            isPaused={isMenuOpen || showConfirmDialog}
           />
         )}
         
@@ -159,13 +167,19 @@ function GameScreen({ chapterId, onReturnToMenu, onOpenSettings, onOpenSaveMenu,
           </button>
           <button onClick={(e) => { 
             e.stopPropagation(); 
-            if (window.confirm('¿Estás seguro de que quieres regresar al menú principal? El progreso no guardado se perderá.')) {
-              onReturnToMenu();
-            }
+            setShowConfirmDialog(true);
           }} className={styles.controlButton}>
             Menú Principal
           </button>
         </div>
+
+        {showConfirmDialog && (
+          <ConfirmDialog
+            message="¿Estás seguro de que quieres regresar al menú principal? El progreso no guardado se perderá."
+            onConfirm={onReturnToMenu}
+            onCancel={() => setShowConfirmDialog(false)}
+          />
+        )}
       </GameContainer>
     </div>
   );

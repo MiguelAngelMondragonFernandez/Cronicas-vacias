@@ -22,7 +22,7 @@
 .choiceButton {
   background-color: rgba(10, 20, 40, 0.85);
   color: white;
-  border: 2px solid #5a8bd8;
+  border: 2px solid var(--ui-color-primary);
   padding: 25px;
   font-size: 1.4rem;
   cursor: pointer;
@@ -32,5 +32,5 @@
 }
 
 .choiceButton:hover {
-  background-color: #5a8bd8;
+  background-color: var(--ui-color-primary);
 }

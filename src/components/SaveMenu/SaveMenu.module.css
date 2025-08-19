@@ -2,13 +2,25 @@
   width: 90vw;
   max-width: 1000px;
   height: 80vh;
-  background: rgba(0, 0, 0, 0.95);
-  border: 2px solid #666;
+  background: rgba(10, 20, 40, 0.95);
+  border: 2px solid var(--ui-color-primary);
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   color: white;
   font-family: inherit;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .header {
@@ -16,7 +28,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  border-bottom: 1px solid #666;
+  border-bottom: 1px solid var(--ui-color-primary);
 }
 
 .header h2 {
@@ -25,9 +37,9 @@
 }
 
 .backButton {
-  background: #444;
+  background: var(--ui-color-primary);
   color: white;
-  border: 1px solid #666;
+  border: 1px solid var(--ui-color-primary);
   padding: 8px 16px;
   border-radius: 5px;
   cursor: pointer;
@@ -70,14 +82,14 @@
 
 .saveSlot {
   position: relative;
-  border: 1px solid #666;
+  border: 1px solid var(--ui-color-primary);
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.05);
   transition: all 0.2s;
 }
 
 .saveSlot:hover {
-  border-color: #888;
+  border-color: var(--ui-color-primary);
   background: rgba(255, 255, 255, 0.1);
 }
 
@@ -92,7 +104,7 @@
 
 .saveSlotContent.selected {
   background: rgba(100, 150, 255, 0.2);
-  border-color: #6496ff;
+  border-color: var(--ui-color-primary);
 }
 
 .saveInfo {
@@ -143,15 +155,15 @@
   display: flex;
   gap: 5px;
   padding: 10px 15px;
-  border-top: 1px solid #666;
+  border-top: 1px solid var(--ui-color-primary);
   background: rgba(0, 0, 0, 0.3);
 }
 
 .actionButton {
   flex: 1;
-  background: #444;
+  background: var(--ui-color-primary);
   color: white;
-  border: 1px solid #666;
+  border: 1px solid var(--ui-color-primary);
   padding: 8px 12px;
   border-radius: 4px;
   cursor: pointer;

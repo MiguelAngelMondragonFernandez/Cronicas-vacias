@@ -6,6 +6,7 @@ import ChapterSelect from './components/ChapterSelect/ChapterSelect';
 import GameScreen from './components/GameScreen/GameScreen';
 import SettingsMenu from './components/SettingsMenu/SettingsMenu';
 import SaveMenu from './components/SaveMenu/SaveMenu';
+import './App.css';
 
 function App() {
   const [gameState, setGameState] = useState('mainMenu');
@@ -15,6 +16,7 @@ function App() {
   const [saveMenuMode, setSaveMenuMode] = useState('save');
   const [gameSceneId, setGameSceneId] = useState('start');
   const [playerChoices, setPlayerChoices] = useState([]);
+  const [isMenuClosing, setIsMenuClosing] = useState(false);
 
   const handleStartGame = (chapterId) => {
     setCurrentChapter(chapterId);
@@ -40,8 +42,7 @@ function App() {
   };
 
   const handleCloseSettings = () => {
-    setGameState(previousGameState || 'mainMenu');
-    setPreviousGameState(null);
+    setIsMenuClosing(true);
   };
 
   const handleOpenSaveMenu = (gameStateData) => {
@@ -58,9 +59,7 @@ function App() {
   };
 
   const handleCloseSaveMenu = () => {
-    setGameState(previousGameState || 'mainMenu');
-    setPreviousGameState(null);
-    setCurrentGameState(null);
+    setIsMenuClosing(true);
   };
 
   const handleLoadGame = (saveData) => {
@@ -70,10 +69,21 @@ function App() {
     setGameState('inGame');
   };
 
+  const onAnimationEnd = () => {
+    if (isMenuClosing) {
+      setGameState(previousGameState || 'mainMenu');
+      setPreviousGameState(null);
+      setCurrentGameState(null);
+      setIsMenuClosing(false);
+    }
+  };
+
   const renderGameState = () => {
-    switch (gameState) {
-      case 'inGame':
-        return (
+    const isMenuOpen = gameState === 'settingsMenu' || gameState === 'saveMenu';
+
+    if (gameState === 'inGame' || gameState === 'settingsMenu' || gameState === 'saveMenu') {
+      return (
+        <>
           <GameScreen 
             chapterId={currentChapter} 
             onReturnToMenu={handleReturnToMenu} 
@@ -82,21 +92,30 @@ function App() {
             onOpenLoadMenu={handleOpenLoadMenu}
             initialSceneId={gameSceneId}
             initialChoices={playerChoices}
+            isMenuOpen={isMenuOpen}
           />
-        );
+          {gameState === 'settingsMenu' && 
+            <div className={`overlay ${isMenuClosing ? 'closing' : ''}`} onAnimationEnd={onAnimationEnd}>
+              <SettingsMenu onBack={handleCloseSettings} />
+            </div>
+          }
+          {gameState === 'saveMenu' && 
+            <div className={`overlay ${isMenuClosing ? 'closing' : ''}`} onAnimationEnd={onAnimationEnd}>
+              <SaveMenu 
+                onBack={handleCloseSaveMenu} 
+                onLoadGame={handleLoadGame}
+                gameState={currentGameState}
+                mode={saveMenuMode}
+              />
+            </div>
+          }
+        </>
+      );
+    }
+
+    switch (gameState) {
       case 'chapterSelect':
         return <ChapterSelect onSelectChapter={handleStartGame} onBack={handleReturnToMenu} />;
-      case 'settingsMenu':
-        return <SettingsMenu onBack={handleCloseSettings} />;
-      case 'saveMenu':
-        return (
-          <SaveMenu 
-            onBack={handleCloseSaveMenu} 
-            onLoadGame={handleLoadGame}
-            gameState={currentGameState}
-            mode={saveMenuMode}
-          />
-        );
       case 'mainMenu':
       default:
         return <MainMenu onStartGame={handleStartGame} onChapterSelect={handleChapterSelect} onOptions={handleOpenSettings} onLoadGame={handleOpenLoadMenu} />;

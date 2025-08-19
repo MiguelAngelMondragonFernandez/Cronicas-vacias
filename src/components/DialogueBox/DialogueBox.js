@@ -3,9 +3,9 @@ import { useTypewriter } from '../../hooks/useTypewriter';
 import { SettingsContext } from '../../context/SettingsContext';
 import styles from './DialogueBox.module.css';
 
-const DialogueBox = ({ character, text }) => {
+const DialogueBox = ({ character, text, isPaused }) => {
   const { settings } = useContext(SettingsContext);
-  const displayedText = useTypewriter(text);
+  const displayedText = useTypewriter(text, isPaused);
 
   return (
     <div className={styles.dialogueBox}>
